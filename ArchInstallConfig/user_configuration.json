@@ -3,10 +3,13 @@
     "audio_config": {
         "audio": "pulseaudio"
     },
-    "bootloader": "Systemd-boot",
+    "bootloader": "Grub",
     "custom_commands": [],
     "disk_config": {
-        "config_type": "manual_partitioning",
+        "btrfs_options": {
+            "snapshot_config": null
+        },
+        "config_type": "default_layout",
         "device_modifications": [
             {
                 "device": "/dev/nvme0n1",
@@ -21,7 +24,7 @@
                         "fs_type": "fat32",
                         "mount_options": [],
                         "mountpoint": "/boot",
-                        "obj_id": "d28588c8-5897-4ef4-be44-64da51b58977",
+                        "obj_id": "a44835ef-0c9e-43ec-811f-7d5e5711e6da",
                         "size": {
                             "sector_size": {
                                 "unit": "B",
@@ -48,7 +51,7 @@
                         "fs_type": "ext4",
                         "mount_options": [],
                         "mountpoint": "/",
-                        "obj_id": "8f7f699c-c1d7-4170-b120-6d33cc750be6",
+                        "obj_id": "d562950d-9eac-4b18-823b-97d974614d34",
                         "size": {
                             "sector_size": {
                                 "unit": "B",
@@ -77,7 +80,7 @@
                         "fs_type": "ext4",
                         "mount_options": [],
                         "mountpoint": "/home",
-                        "obj_id": "5efa5e57-1f47-424c-917c-ceda204b1b32",
+                        "obj_id": "be7742f5-23fe-4221-8ba3-5b5a5db1c49e",
                         "size": {
                             "sector_size": {
                                 "unit": "B",
@@ -102,7 +105,7 @@
             }
         ]
     },
-    "hostname": "archlinux",
+    "hostname": "archi",
     "kernels": [
         "linux"
     ],
@@ -111,21 +114,35 @@
         "sys_enc": "UTF-8",
         "sys_lang": "en_US.UTF-8"
     },
+    "mirror_config": {
+        "custom_repositories": [],
+        "custom_servers": [],
+        "mirror_regions": {},
+        "optional_repositories": []
+    },
     "network_config": {
         "type": "iso"
     },
     "ntp": true,
     "packages": [
-        "0ad"
+        "alacritty",
+        "fastfetch",
+        "neovim",
+        "code",
+        "polybar"
     ],
     "parallel_downloads": 0,
     "profile_config": {
-        "gfx_driver": null,
-        "greeter": null,
+        "gfx_driver": "All open-source",
+        "greeter": "lightdm-slick-greeter",
         "profile": {
-            "custom_settings": {},
-            "details": [],
-            "main": "Minimal"
+            "custom_settings": {
+                "Bspwm": {}
+            },
+            "details": [
+                "Bspwm"
+            ],
+            "main": "Desktop"
         }
     },
     "services": [],
