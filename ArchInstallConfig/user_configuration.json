@@ -129,7 +129,9 @@
         "fastfetch",
         "neovim",
         "code",
-        "polybar"
+        "polybar",
+        "go",
+        "git"
     ],
     "parallel_downloads": 0,
     "profile_config": {
