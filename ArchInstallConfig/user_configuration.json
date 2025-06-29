@@ -129,9 +129,10 @@
         "fastfetch",
         "neovim",
         "code",
-        "polybar",
         "go",
-        "git"
+        "git",
+	"GTK-4",
+	"Hyperlock"
         ],
     "parallel_downloads": 0,
     "profile_config": {
